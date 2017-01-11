@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ARGBshift</string>
     <string name="action_settings">Settings</string>
+    <string name="hex_result">HexResult : %s</string>
 </resources>

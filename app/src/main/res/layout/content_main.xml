@@ -23,7 +23,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
 
-            <EditText
+            <com.zhangwx.argbshift.Widget.CustomEditText
+                android:id="@+id/TextA"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="input A" />
@@ -34,7 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
 
-            <EditText
+            <com.zhangwx.argbshift.Widget.CustomEditText
+                android:id="@+id/TextR"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="input R" />
@@ -51,7 +53,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
 
-            <EditText
+            <com.zhangwx.argbshift.Widget.CustomEditText
+                android:id="@+id/TextG"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="input G" />
@@ -62,7 +65,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
 
-            <EditText
+            <com.zhangwx.argbshift.Widget.CustomEditText
+                android:id="@+id/TextB"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="input B" />
@@ -70,13 +74,15 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="30dp"
-        android:text="RESULT:" />
-
-    <TextView
         android:id="@+id/result"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/color"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
 </LinearLayout>
