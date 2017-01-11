@@ -75,6 +75,7 @@
 
     <TextView
         android:id="@+id/result"
+        android:textColor="@color/primary"
         android:paddingTop="30dp"
         android:paddingBottom="30dp"
         android:layout_width="match_parent"

@@ -3,6 +3,7 @@ package com.zhangwx.argbshift;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -53,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == R.id.action_exit){
+            finish();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -70,7 +75,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String shift(String value) {
-        return Integer.toHexString(Integer.valueOf(value));
+        if (TextUtils.isEmpty(value)) {
+            return "00";
+        }
+        final int val = Integer.valueOf(value);
+        if (val < 16) {
+            return "0" + Integer.toHexString(val);
+        }
+        return Integer.toHexString(val);
     }
 
     private void change(String s) {
@@ -79,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         final long color = Long.decode(s.trim());
         Log.e(TAG, "change : color = " + color);
         mColorView.setBackgroundColor((int) color);
+        mColorView.requestFocus();
     }
 
 }

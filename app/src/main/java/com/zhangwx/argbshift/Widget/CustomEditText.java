@@ -1,6 +1,7 @@
 package com.zhangwx.argbshift.Widget;
 
 import android.content.Context;
+import android.text.Editable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.EditText;
@@ -40,5 +41,10 @@ public class CustomEditText extends EditText {
             setText("");
         }
         super.onTextChanged(text, start, lengthBefore, lengthAfter);
+    }
+
+    @Override
+    public Editable getText() {
+        return super.getText();
     }
 }
